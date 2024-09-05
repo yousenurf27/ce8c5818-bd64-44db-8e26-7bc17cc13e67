@@ -10,17 +10,19 @@
 
    Sebelum migrate database, buat file `.env` dengan variable `DATABASE_URL` sama seperti file `.env.development`.
 
-   Generate prisma/client dengan perintah berikut :
+   1. Buat database dengan nama `antusiusdb`
 
-   `npm run prisma generate`
+   2. Generate prisma/client, dengan perintah :
 
-   Buat database dengan nama `antusiusdb`, setelah membuat database migrate melalui terminal :
+      `npm run prisma generate`
 
-   `npm run prisma migrate dev`
+   3. Kemudian migrate table ke database, dengan perintah :
 
-   Kemudian jalankan perintah berikut, untuk seeding data :
+      `npm run prisma migrate dev`
 
-   `npm run prisma db seed`
+   4. Kemudian seeding data ke database, dengan perintah :
+
+      `npm run prisma db seed`
 
    _Note: Jika migrate tidak dapat dilakukan, rubah nilai varibale `DATABASE_URL` yang ada di file `.env` dan `.env.development` sesuai dengan username dan password (optional) mysql ada._
 
